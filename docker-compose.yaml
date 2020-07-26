@@ -1,0 +1,7 @@
+version: "3"
+services:
+  api:
+    build: ./api
+    ports: ['5000:5000']
+    # map the api folder to the app folder in the docker container to have the updates source code there for development.
+    volumes: ['./api:/app', './data:/data']
